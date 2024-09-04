@@ -16,6 +16,7 @@ public class Prog54b {
         num3 = numScanner.nextInt();
         num4 = numScanner.nextInt();
 
+
         sum = (num1+num2+num3+num4);
         avg = ((double)sum / 4);
 
