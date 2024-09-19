@@ -4,7 +4,9 @@ import jdk.swing.interop.SwingInterOpUtils;
 import java.util.*;
 
 public class Prog58t {
+
     public static void main(String[] args) {
+
         Scanner in = new Scanner(System.in);
 
         double price, pay, rem;

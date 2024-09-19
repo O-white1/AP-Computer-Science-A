@@ -26,7 +26,10 @@ public class Prog88a {
         }
 
         System.out.println("Nums: " + num1 + "and " + num2);
-
+        System.out.println("Sum: " + sum);
+        System.out.println("Difference: " +dif);
+        System.out.println("Product: " +prod);
+        System.out.println("Absolute Differnce:");
         System.out.println("Max: " +max);
         System.out.println("Min: " +min);
 
