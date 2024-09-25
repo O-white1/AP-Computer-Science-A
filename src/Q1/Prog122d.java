@@ -1,6 +1,8 @@
 package Q1;
 
 
+import org.w3c.dom.ls.LSOutput;
+
 public class Prog122d {
     public static long yFunc(int x) {
         long y = ((long)Math.pow(x, 6))
