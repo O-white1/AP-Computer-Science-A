@@ -12,7 +12,7 @@ public class Prog122h {
             sqrt = Math.sqrt(num);
             frthroot = Math.pow(num, 1.0 /4);
             System.out.printf("%d\t\t%d\t\t%f\t\t%d\t\t%f\n", num, sqr, sqrt, cube, frthroot);
-
+            //good lord
         }
     }
 }
