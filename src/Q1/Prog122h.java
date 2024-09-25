@@ -9,7 +9,10 @@ public class Prog122h {
             num = lcv;
             sqr = num * num;
             cube = (int)Math.pow(num, 3.0);
-            System.out.println("%d\t%d\t%f\t%d\t%f", num, sqr, sqrt, cube, frthroot);
+            sqrt = Math.sqrt(num);
+            frthroot = Math.pow(num, 1.0 /4);
+            System.out.printf("%d\t\t%d\t\t%f\t\t%d\t\t%f\n", num, sqr, sqrt, cube, frthroot);
+
         }
     }
 }
