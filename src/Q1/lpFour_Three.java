@@ -14,7 +14,7 @@ public class lpFour_Three {
 
         if (dozens >= 0 && dozens < 4) price = 0.50;
         if (dozens >= 4 && dozens < 6) price = 0.45;
-        if (dozens >= 6 && dozens < 1) price = 0.40;
+        if (dozens >= 6 && dozens < 11) price = 0.40;
         if (dozens >= 11)              price = 0.35;
 
         double total = (dozens * price) + (remEggs * (price / 12));
