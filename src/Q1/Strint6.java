@@ -8,16 +8,14 @@ public class Strint6 {
         System.out.println("Enter the string: ");
         String str = sc.nextLine().toLowerCase().trim();
 
-        boolean CharIsNew = true;
-        int UniqueCount = 0;
+        String[] myArray = str.split(" ");
+        String[] myArray2 = new String[myArray.length];
 
-        for (int i = 0; i < str.length(); i++) {
-            for (int j = i + 1; j < str.length(); j++) {
-                if (str.charAt(i) != str.charAt(j)) {
-                    UniqueCount++;
-                }
-            }
+        for (int i = 0; i < myArray.length; i++) {
+            myArray2[i] =  myArray[myArray.length - 1 - i];
         }
-        System.out.println(UniqueCount);
+        for (String lcv : myArray2) {
+            System.out.printf(lcv + " ");
+        }
     }
 }
