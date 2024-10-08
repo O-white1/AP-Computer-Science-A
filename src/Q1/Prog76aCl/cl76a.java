@@ -9,7 +9,5 @@ public class cl76a {
     public void Calc() {
         Num = (Num*9)*12345679;
     }
-    public int getNum() {
-        return Num;
-    }
+    public int getNum() {return Num;}
 }
