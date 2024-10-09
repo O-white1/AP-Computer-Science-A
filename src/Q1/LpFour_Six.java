@@ -11,7 +11,6 @@ public class LpFour_Six {
         String[] RandOpArray = {"+", "-", "*", "/"};
         String Op = RandOpArray[(int) (Math.random() * (3))];
 
-        String Operation = String.format("%d\t%s\t%d", RandNum1, Op, RandNum2);
 
 
     }
