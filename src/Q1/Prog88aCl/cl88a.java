@@ -1,8 +1,8 @@
 package Q1.Prog88aCl;
 
 public class cl88a {
-    private int n1;
-    private int n2;
+    private final int n1;
+    private final int n2;
     private int sum, dif, prod, dist, max, min;
     private double avg;
 
