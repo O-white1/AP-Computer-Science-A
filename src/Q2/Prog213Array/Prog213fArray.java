@@ -1,4 +1,6 @@
 package Q2.Prog213Array;
+import org.w3c.dom.ls.LSOutput;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
@@ -28,4 +30,8 @@ public class Prog213fArray {
             System.out.println("Error: " + e);
         }
     }
+
+
+
+
 }
