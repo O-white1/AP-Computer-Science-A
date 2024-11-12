@@ -3,6 +3,7 @@ package Q2;
 public class BigArray {
     public static void main(String[] args) {
         //1.
+        System.out.println("1.");
         int[] array = new int[19];
         for (int lcv = 0; lcv < array.length; lcv++) {
             array[lcv] = (int)(Math.random() * (91 - 20) + 20); // Math.random() * (max-min)+min
@@ -50,5 +51,83 @@ public class BigArray {
         int myThird = array[2];
         array[2] = 5;
         System.out.println("outed num: " + myThird);
+        // 10.
+        for (int num: array) // REVISIT WITH FUNCTIONAL TALK WITH SZELL
+            if (num >= 50 && num <=59)
+                System.out.print(num + " ");
+        System.out.println();
+        //11.
+        for (int lcv = 0; lcv < array.length; lcv++) {
+            if (array[lcv]%4==0) System.out.print(array[lcv] + " ");
+        }
+        System.out.println();
+        // 12.
+        boolean isSixty = false;
+        for (int n: array) {
+            if (n == 60) isSixty = true;
+        }
+        System.out.println("Is 60 in the list: " + isSixty);
+        // 13.
+        boolean same = true;
+        for (int lcv = 0; lcv < array.length; lcv++) {
+            if (array[lcv] != array[array.length-1]) same = false;
+
+        }
+        System.out.println("Is the array palindromic: " + same);
+        //14.
+        double average = 0;
+        for (int x: array) average+= x;
+        average /= array.length;
+
+        int avgCount = 0;
+        for (int x: array) {
+            if (x > average) avgCount++;
+        }
+        System.out.printf("there are %d numbers greater than the average\n", avgCount);
+        // 15.
+
+        int evenCount = 0;
+        for (int x: array) {
+            if (x % 2 == 0) evenCount++;
+        }
+        System.out.println("Number of Evens: " + evenCount);
+        // 16.
+        int[] array2 = new int[array.length];
+        for (int lcv = 0; lcv < array.length; lcv++) {
+            array2[lcv] = array[(array.length)-1];
+        }
+        for (int n: array2)
+            System.out.print(n + " ");
+        System.out.println();
+        // 17.
+        int[] shiftArray = CircRight(array);
+        for (int n: shiftArray) System.out.print(n + " ");
+
+
+        // 18.
+        int sum = 0;
+        for (int num: array) {
+            int digitsum = 0;
+            int temp = num;
+            while (temp > 0) {
+                int n = temp % 10;
+                temp /= 10;
+                digitsum += n;
+            }
+            sum += digitsum;
+        }
+        System.out.println("The sum of all digits of all nums in array: " + sum);
+
+
+    }
+
+    public static int[] CircRight(int[] array) {
+        int temp = array[array.length-1];
+        int[] shifted = new int[array.length];
+        for (int lcv=1; lcv<array.length; lcv++) {
+            shifted[lcv] = array[lcv-1];
+        }
+        shifted[0] = temp;
+        return shifted;
     }
 }
