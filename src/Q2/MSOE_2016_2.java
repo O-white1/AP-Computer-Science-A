@@ -11,7 +11,5 @@ public class MSOE_2016_2 {
 
         double angleC = Math.sin(sideC) / (Math.sin(sideA) / angleA);
         System.out.printf("The Degree angle of C is %.2f", angleC);
-
-
     }
 }
