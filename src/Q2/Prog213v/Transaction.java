@@ -8,7 +8,6 @@ public class Transaction {
         myType = type;
         myAmount = amount;
     }
-
     public String getType()   {return myType;  }
     public double getAmount() {return myAmount;}
 }
