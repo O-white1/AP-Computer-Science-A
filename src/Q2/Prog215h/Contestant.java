@@ -3,7 +3,7 @@ package Q2.Prog215h;
 import java.util.ArrayList;
 
 public class Contestant {
-    private double[] myScores;
+    private final double[] myScores;
     private double sum;
     private double avg;
 
@@ -20,7 +20,7 @@ public class Contestant {
     public void print() {
         System.out.println("\nScores: ");
         for (double score : myScores)
-            System.out.print("\t" + score + " ");
+            System.out.print("  " + score + " ");
         System.out.println("\nAverage: " + avg);
     }
 }

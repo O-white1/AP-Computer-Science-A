@@ -1,6 +1,5 @@
 package Q2.Prog215h;
 
-import javax.print.attribute.standard.PrinterMakeAndModel;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,9 +10,10 @@ public class Prog215h {
         try {
             Scanner file = new Scanner(new File("Langdat/prog215h.txt"));
             ArrayList<Contestant> contestants = new ArrayList<>();
+            double[] scores = new double[8];
 
             while (file.hasNext()) {
-                double[] scores = new double[8];
+                //scores = new double[8];
                 for (int i = 0; i < 8; i++)
                     scores[i] = file.nextDouble();
                 Contestant c = new Contestant(scores);
