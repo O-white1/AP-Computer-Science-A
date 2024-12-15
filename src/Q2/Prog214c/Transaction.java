@@ -25,6 +25,7 @@ public class Transaction {
         if (myType=='P')   myGallonsCost = 1.479*myGallons;
         if (myType=='R')   myGallonsCost = 1.359*myGallons;
         if (myType=='H')   myGallonsCost = 1.429*myGallons;
+        myTotal = myGallonsCost + myWashCost;
 
 
     }
@@ -34,7 +35,8 @@ public class Transaction {
         if (myType=='H') System.out.printf("High Octane:          %.2f Gallons\n", myGallonsCost);
 
         System.out.printf("Gasoline:\n %.2f\n\n", myGallonsCost);
-        System.out.printf("Wash: %b   \n%.2f\n\n", myWash, myWashCost);
+        System.out.printf("Wash: %b   \n%.2f\n\n\n\n", myWash, myWashCost);
+        System.out.printf("Total Cost: %.2f\n\n\n\n\n", myTotal);
 
 
     }
