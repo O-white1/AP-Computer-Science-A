@@ -27,3 +27,9 @@ public class Prog215h {
         }
     }
 }
+
+/*
+if (lastContestant.myScores[myScores.length-1]!=0) {
+
+
+ */
