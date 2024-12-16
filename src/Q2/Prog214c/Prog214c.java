@@ -14,8 +14,10 @@ public class Prog214c {
             while (file.hasNext()) {
                 String   line    = file.nextLine();
                 String[] tokens  = line.split("\\s+"); // badass regex shiiiiit.
-
-                Transaction sale = new Transaction(tokens[0].charAt(0), Double.parseDouble(tokens[1]), (tokens[2].equals("Y")));
+                char type        = tokens[0].charAt(0);
+                double gallons   = Double.parseDouble(tokens[1]);
+                boolean wash     = (tokens[2].equals("Y"));
+                Transaction sale = new Transaction(type,gallons, wash);
                 sale.calc();
                 transactions.add(sale);
             }

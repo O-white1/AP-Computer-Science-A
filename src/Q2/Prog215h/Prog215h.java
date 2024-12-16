@@ -20,16 +20,11 @@ public class Prog215h {
                 c.calc();
                 contestants.add(c);
             }
-            for (Contestant c : contestants) c.print();
+            for (Contestant c : contestants)
+                c.print();
         }
         catch(IOException e) {
             System.out.println("Error: " + e);
         }
     }
 }
-
-/*
-if (lastContestant.myScores[myScores.length-1]!=0) {
-
-
- */
