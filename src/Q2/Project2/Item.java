@@ -1,6 +1,5 @@
 package Q2.Project2;
 
-
 public class Item {
     String myName;
     String myDate;

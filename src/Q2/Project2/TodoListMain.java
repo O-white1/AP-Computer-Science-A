@@ -8,7 +8,7 @@ public class TodoListMain {
     public static void sort(ArrayList<Item> list) {
         Item[] copy = list.toArray(new Item[list.size()+1]);
         for (int lcv = 0; lcv < list.size()-1; lcv++) {
-            if (copy[lcv].myPriority<(copy[lcv+1].myPriority)) {
+            if (copy[lcv].myPriority>(copy[lcv+1].myPriority)) {
                 Item temp = list.get(lcv);
                 Item i2 = list.get(lcv+1);
                 list.set(lcv, i2);
