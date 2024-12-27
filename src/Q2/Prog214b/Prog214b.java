@@ -2,47 +2,31 @@ package Q2.Prog214b;
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Prog214b {
     public static void main(String[] args) {
         try {
             Scanner file = new Scanner(new File("Langdat/prog214b.dat"));
-            int    employeeNumber;
-            double yearToYearPay;
-            double basePayRate;
-            double shiftCode;
-            int    hoursWorked;
+            ArrayList<cl214b> list = new ArrayList<>();
 
             while (file.hasNext()) {
-                employeeNumber = file.nextInt();
-                yearToYearPay  = file.nextDouble();
-                basePayRate    = file.nextDouble();
-                shiftCode      = file.nextDouble();
-                hoursWorked    = file.nextInt();
-
-
+                cl214b worker = new cl214b(file.nextInt(), file.nextDouble(), file.nextDouble(), file.nextDouble(), file.nextDouble());
+                worker.calc();
+                list.add(worker);
             }
-
-
-            //The gross pay is found by multiplying the hours
-            //worked by the pay rate where the
-            //
-            // pay rate is the product of the base pay rate
-            // and the shift factor.
-
-
-
-            /*
-            Employee number: 1002
-            Hours: 25.00
-            Rate: 3.25
-            Shift Factor: 1.00
-                      // Current // Year-to date // : 10 spaces
-            Gross Pay     81.25    |  3970.00
-            Withholding   0.00     |  N/A
-            FICA          4.92     |  N/A
-            Net Pay       76.33    |  N/A
-             */
+            for (cl214b me : list) {
+                System.out.println();
+                System.out.println("Employee Number: " + me.getEmployeeNumber());
+                System.out.println("Hours Worked:    " + me.getHoursWorked());
+                System.out.println("Base Pay Rate:   " + me.getBasePayRate());
+                System.out.println("Shift Code:      " + me.getShiftCode());
+                System.out.printf("Gross Pay:       %.2f(Current)\t%.2f(YearToDate)\n", me.getGrossPay(), me.getYearToYearPay());
+                System.out.printf("Withholding:     %.2f\n", me.getWithholding());
+                System.out.printf("FICA:            %.2f\n", me.getGrossPay()* me.getTaxRate());
+                System.out.println("NetPay:          " + me.getNetPay());
+                System.out.println("_________________________________________");
+            }
         }
         catch(IOException e) {
             System.out.println("Error: " + e);
