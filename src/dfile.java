@@ -1,5 +1,8 @@
-import java.io.IOException;
+package Q2.Prog215i;
+
 import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class dfile {
