@@ -18,6 +18,14 @@ public class Prog470b {
                 sum += mat[lcv][lcv];
             }
             System.out.println("First Diagonal Sum: " + sum);
+            sum = 0;
+            for (int lcv = mat.length-1; lcv > 0; lcv--) {
+                int lcv2 =
+                sum += mat[lcv][lcv2];
+            }
+            System.out.println("First Diagonal Sum: " + sum);
+
+
 
 
 
