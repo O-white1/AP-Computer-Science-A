@@ -8,9 +8,12 @@ public class Prog465c {
     public static void main(String[] args) {
         try {
             Scanner file = new Scanner(new File("Langdat/prog465c.txt"));
-            int[][] mat  = new int[file.nextInt()][file.nextInt()];
+            int rows = file.nextInt();
+            int cols = file.nextInt();
+            int[][] mat  = new int[rows][cols];
 
             System.out.println("Original File: ");
+
             for (int i = 0; i < mat.length; i++) {
                 for (int j = 0; j < mat[i].length; j++) {
                     mat[i][j] = file.nextInt();
