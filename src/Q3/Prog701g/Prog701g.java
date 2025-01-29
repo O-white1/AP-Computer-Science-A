@@ -35,8 +35,34 @@ public class Prog701g {
                     num = file.nextInt();
                 }
 
+                double  tot = 0;
+                int     cnt = 0;
+                int totStus = 0;
+
+                String large = "";
+                String small = "################################################################";
+                for (Person p : list) {
+                    if (p instanceof Student) {
+                        tot += ((Student) p).getGPA();
+                        cnt++;
+                    }
+                    else if (p instanceof Teacher) {
+                        totStus += ((Teacher) p).getMyNumStus();
+                    }
+                    else if (p instanceof Admin) {
+                        String word = ((Admin) p).getFavWord();
+                        if (word.length() > large.length())
+                            large = word;
+                        if (word.length()<small.length())
+                            small = word;
+                    }
+                }
 
 
+                System.out.printf("Average Student GPA: %.2f\n", tot/cnt);
+                System.out.println("Total number of students: " + totStus);
+                System.out.println("Smallest fav admin word: " + small);
+                System.out.println("Largest fav admin word: " + large);
 
         }
         catch(IOException e) {
