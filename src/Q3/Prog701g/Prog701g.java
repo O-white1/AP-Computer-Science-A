@@ -36,7 +36,7 @@ public class Prog701g {
                 }
 
                 double  tot = 0;
-                int     cnt = 0;
+                int cnt = 0;
                 int totStus = 0;
 
                 String large = "";
