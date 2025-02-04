@@ -32,10 +32,10 @@ public class Prog477a {
             System.out.println("Grade\t\tMale\t\tFemale\t\tTotal");
             for (int i = 1; i < mat.length; i++) {
                 if (i == 1) System.out.print("A\t");
-                else if (i == 2) System.out.print("B\t");
-                else if (i == 3) System.out.print("C\t");
-                else if (i == 4) System.out.print("D\t");
-                else if (i == 5) System.out.print("E\t");
+                if (i == 2) System.out.print("B\t");
+                if (i == 3) System.out.print("C\t");
+                if (i == 4) System.out.print("D\t");
+                if (i == 5) System.out.print("F\t");
 
 
                 for (int j : mat[i]) {
