@@ -9,24 +9,21 @@ public class Prog465h {
         try {
             Scanner file = new Scanner(new File("Langdat/prog465h.dat"));
             while (file.hasNext()) {
-                int[][] mat = new int[file.nextInt()][file.nextInt()];
-                int[][] reducedMat = new int[mat[0].length][3];
-                int a = 0;
+                int rows = file.nextInt();
+                int cols = file.nextInt();
+                int[][] mat = new int[rows+1][cols+1];
+                int[][] reducedMat = new int[cols][3];
 
-                for (int i = 0; i < mat.length; i++) {
-                    for (int j = 0; j < mat[i].length; j++) {
+                for (int i = 0; i < mat.length; i++)
+                    for (int j = 0; j < mat[i].length-1; j++)
                         mat[i][j] = file.nextInt();
-                    }
-
-                    }
-
 
                 for (int i = 0; i < mat.length; i++) {
                     for (int j = 0; j < mat[i].length; j++) {
                         if (mat[i][j] != 0) {
-                            reducedMat[2][j] = mat[i][j];
-                            reducedMat[0][j] = j;
-                            reducedMat[1][i] = i;
+                            reducedMat[j][2] = mat[i][j];
+                            reducedMat[j][0] = j;
+                            reducedMat[j][1] = i;
                         }
                     }
                 }
@@ -37,8 +34,10 @@ public class Prog465h {
                     System.out.println();
                 }
                 System.out.println("\n\n");
-                for (int[] redarr : reducedMat) {
-                    for (int lcv : redarr) {
+
+
+                for (int[] redArr : reducedMat) {
+                    for (int lcv : redArr) {
                         System.out.print(lcv + "\t");
                     }
                     System.out.println();
