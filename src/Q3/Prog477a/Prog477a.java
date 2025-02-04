@@ -30,19 +30,15 @@ public class Prog477a {
                         }
             }
             System.out.println("Grade\t\tMale\t\tFemale\t\tTotal");
-            for (int i = 0; i < mat.length; i++) {
-                switch (i) {
-                    //case 1: System.out.print("A\t");   break;
-                    case 2: System.out.print("B\t");   break;
-                    case 3: System.out.print("C\t");   break;
-                    case 4: System.out.print("D\t");   break;
-                    case 5: System.out.print("F\t"); break;
-                    //default: System.out.print("\t");
-                    default: System.out.print("A\t");   break;
-                }
+            for (int i = 1; i < mat.length; i++) {
+                if (i == 1) System.out.print("A\t");
+                else if (i == 2) System.out.print("B\t");
+                else if (i == 3) System.out.print("C\t");
+                else if (i == 4) System.out.print("D\t");
+                else if (i == 5) System.out.print("E\t");
 
-                int[] arr = mat[i];
-                for (int j : arr) {
+
+                for (int j : mat[i]) {
                     System.out.print("\t\t" + j + "\t");
                 }
                 System.out.println();
