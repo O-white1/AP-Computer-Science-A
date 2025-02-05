@@ -2,6 +2,7 @@ package Q3;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 public class Prog465h {
@@ -11,38 +12,22 @@ public class Prog465h {
             while (file.hasNext()) {
                 int rows = file.nextInt();
                 int cols = file.nextInt();
-                int[][] mat = new int[rows+1][cols+1];
-                int[][] reducedMat = new int[cols][3];
+                int[][] mat = new int[rows][cols];
+                int[][] red = new int[3][cols];
 
-                for (int i = 0; i < mat.length; i++)
-                    for (int j = 0; j < mat[i].length-1; j++)
+                for (int i = 1; i <= rows; i++)
+                    for (int j = 1; j <= cols; j++)
                         mat[i][j] = file.nextInt();
 
-                for (int i = 0; i < mat.length; i++) {
-                    for (int j = 0; j < mat[i].length; j++) {
-                        if (mat[i][j] != 0) {
-                            reducedMat[j][2] = mat[i][j];
-                            reducedMat[j][0] = j;
-                            reducedMat[j][1] = i;
+                for (int r = 0; r <= rows; r++) {
+                    for (int c = 0; c < cols; c++) {
+                        if (mat[r][c] != 0) {
+                            //TODO: populate reduced matrix
                         }
                     }
-                }
-                for (int[] arr : mat) {
-                    for (int lcv : arr) {
-                        System.out.print(lcv + "\t");
-                    }
                     System.out.println();
                 }
-                System.out.println("\n\n");
-
-
-                for (int[] redArr : reducedMat) {
-                    for (int lcv : redArr) {
-                        System.out.print(lcv + "\t");
-                    }
-                    System.out.println();
-                }
-                System.out.println("\n\n");
+                System.out.println("\n");
             }
         }
         catch(IOException e) {
