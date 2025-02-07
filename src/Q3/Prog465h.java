@@ -25,7 +25,6 @@ public class Prog465h {
                 }
                 System.out.println("\n\n");
 
-
                 int[][] red = new int[3][count+1];
                 for (int r = 0; r < mat.length; r++) {
                     for (int c = 0; c < mat[0].length; c++) {
@@ -39,6 +38,7 @@ public class Prog465h {
                 }
                 System.out.println("\n");
             }
+
 
 
         }
