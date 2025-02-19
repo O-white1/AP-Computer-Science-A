@@ -6,7 +6,7 @@ public class DateToCode extends prog607a_Inheritables {
         this.myDate = date;
     }
     public void Calc() {
-        //TODO: Get the Code from the Date based on 607a.png in Assignments
+
     }
 
     public String getCode() {
