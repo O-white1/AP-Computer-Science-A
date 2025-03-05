@@ -13,9 +13,9 @@ public class prog505w {
             Scanner file = new Scanner(new File("Langdat/prog505w.dat"));
             List<Animal> animals = new ArrayList<>();
 
-            int hay         = file.nextInt();
-            double hayCost  = file.nextDouble();
-            int corn        = file.nextInt();
+            int hay = file.nextInt();
+            double hayCost = file.nextDouble();
+            int corn = file.nextInt();
             double cornCost = file.nextDouble();
             int cowRows = file.nextInt();
             int cowPens = file.nextInt();
@@ -52,7 +52,7 @@ public class prog505w {
             }
 
             //TODO: Report income of the day, cumulative weight of all animas
-            //TODO: if theres enough food to fed all, cow that makes most money
+            //TODO: if theres enough food to feed all, cow that makes most money
 
             int minHorseIndex = 0;
             double minHorseValue = Double.MAX_VALUE;
