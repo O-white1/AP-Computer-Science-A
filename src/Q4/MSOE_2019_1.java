@@ -1,7 +1,7 @@
 package Q4;
 import java.util.Scanner;
 
-public class MSOE_2021_1 {
+public class MSOE_2019_1 {
     public static void main(String[] args) {
         int cnt = 0;
         Scanner sc = new Scanner(System.in);
