@@ -12,15 +12,8 @@ public class MSOE_2019_1 {
         for (int i = 0; i < words.length; i++) {
             String word = words[i];
             for (int j = 0; j < word.length()-1; j++) {
-                if ((word.charAt(j)==l)&&(word.charAt(j+1)==l2)) {
-                    System.out.printf("Match found in word %s with %c and %c%n\n", word, l, l2);
-                    cnt++;
-                }
-                if ((word.charAt(j)==l2)&&(word.charAt(j+1)==l)) {
-                    System.out.printf("Match found in word %s with %c and %c%n\n", word, l2, l);
-                    cnt++;
-                }
-
+                if ((word.charAt(j)==l)&&(word.charAt(j+1)==l2)) {System.out.printf("Match found in word %s with %c and %c%n\n", word, l, l2);cnt++;}
+                if ((word.charAt(j)==l2)&&(word.charAt(j+1)==l)) {System.out.printf("Match found in word %s with %c and %c%n\n", word, l2, l);cnt++;}
             }
         }
         System.out.println("Total matches: " + cnt);
